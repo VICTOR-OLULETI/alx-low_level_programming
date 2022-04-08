@@ -2,13 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/** 
- * main - Prints a random number and tells
- * 	if positive or negative or zero
- * 	 
- *
- *
- * Return: Always 0. 
+/**main - Prints a random number and tell if positive or negative or zero.
+ *Return: Always 0. 
  */
 int main(void)
 {
