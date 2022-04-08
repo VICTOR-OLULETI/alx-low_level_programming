@@ -1,4 +1,4 @@
-0;10;1c0;10;1c#include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - Prints the alphabet in upper and lower case
