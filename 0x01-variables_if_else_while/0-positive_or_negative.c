@@ -3,8 +3,12 @@
 #include <stdio.h>
 
 /** 
- * main - Print whether the number stored
- * 	  is either positive, negative or zero.
+ * main - Prints a random number and tells
+ * 	if positive or negative or zero
+ * 	 
+ *
+ *
+ * Return: Always 0. 
  */
 int main(void)
 {
