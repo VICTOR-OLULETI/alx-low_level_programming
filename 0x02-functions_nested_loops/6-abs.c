@@ -10,8 +10,8 @@ int _abs(int n)
 {
 	if (n < 0)
 	{
-		n = -n;
-		_putchar(n);
+		n *= -1;
+		_putchar((n % 10) + '0');
 	}
 	else if (n > 0)
 	{
@@ -19,7 +19,7 @@ int _abs(int n)
 	}
 	else
 	{
-		_putchar(n);
+		_putchar('0');
 	}
 	return (0);
 }
