@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 
-int test_isaplha(int c)
+int _isaplha(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
