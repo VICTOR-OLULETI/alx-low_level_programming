@@ -4,7 +4,7 @@
  * _isalpha - function that checks for alphabetic character.
  *@c: The chracter to be tested with alphabetic or not.
  *
- * Return: Always 0.
+ * Return: 1 or 0.
  */
 
 int _isaplha(int c)
