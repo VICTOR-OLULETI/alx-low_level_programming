@@ -23,6 +23,9 @@ void jack_bauer(void)
 					_putchar(':');
 					_putchar(num3 + '0');
 					_putchar(num4 + '0');
+					if (num = 2 && num2 = 3 && num3 = 5 &&
+					    num4 = 9)
+						continue;
 					_putchar('\n');
 				}
 			}
