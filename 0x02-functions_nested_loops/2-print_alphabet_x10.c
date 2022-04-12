@@ -6,7 +6,7 @@
  * Return: Always 0.
  */
 
-int print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
 	char letter;
 	int i;
@@ -22,5 +22,5 @@ int print_alphabet_x10(void)
 		_putchar('\n');
 		i++;
 	}
-	
+
 }
