@@ -3,7 +3,8 @@
 /**
  *
  * add - adds two integers and returns the result
- *
+ *@a: a is the first integer argument
+ *@b : b is the second integer argument
  * Result: Always 0.
  */
 
