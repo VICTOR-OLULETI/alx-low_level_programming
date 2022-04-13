@@ -19,19 +19,25 @@ void times_table(void)
 		{
 			result = i * j;
 			j++;
-			if (result > 9)
+			if ( result == 0)
 			{
+				_putchar('0');
+			}
+			else if (result > 9)
+			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar((result / 10) + '0');
 				_putchar((result % 10) + '0');
 			}
 			else
 			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(result + '0');
 			}
 
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
 		}
 		i++;
 		_putchar('\n');
