@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <math.h>>
 
 /**
  * main - finds and prints the largest prime factor
@@ -14,7 +15,7 @@ int main(void)
 
 	while (1)
 	{
-		if (num % count == 0)
+		if (num % count = sqrt(num);
 		{
 			printf("%lu\n", num / count);
 			break;
