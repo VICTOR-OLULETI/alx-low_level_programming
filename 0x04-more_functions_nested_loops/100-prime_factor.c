@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <math.h>>
 
@@ -10,17 +9,17 @@
 
 int main(void)
 {
-	unsigned int long num = 612852475143;
-	unsigned int long count = (int) sqrt(num);
+	unsigned int long n = 612852475143, a = (int) sqrt(n);
 
 	while (1)
 	{
-		if (num % count == 0)
+
+		if (n % a == 0)
 		{
-			printf("%lu \n", num / count);
+			printf("%lu \n", n / a);
 			break;
 		}
-		count--;
+		a--;
 
 	}
 	return (0);
