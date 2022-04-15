@@ -5,19 +5,22 @@
  *
  * Return: Always 0.
  */
+
 void more_numbers(void)
 {
 	char num = 0;
 	char num2 = 0;
+	char c;
 
 	while (num2 <= 10)
 	{
 		while (num <= 14)
 		{
+			c = num;
 			if (num > 9)
 			{
 				_putchar('1');
-				num = num % 10;
+				c = num % 10;
 			}
 			_putchar(num + '0');
 			num++;
