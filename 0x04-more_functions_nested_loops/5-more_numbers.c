@@ -2,9 +2,9 @@
 
 /**
  * more_numbers - prints 10 times the numbers, from 0 to 14.
- * @c: used instead of num when greater than 9
  * Return: Always 0.
  */
+
 void more_numbers(void)
 {
 	char num;
