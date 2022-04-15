@@ -11,7 +11,7 @@
 int main(void)
 {
 	unsigned int long num = 612852475143;
-	unsigned int long count = sqrt(num);
+	unsigned int long count = int sqrt(num);
 
 	while (1)
 	{
