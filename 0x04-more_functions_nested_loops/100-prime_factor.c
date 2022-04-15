@@ -11,16 +11,17 @@
 int main(void)
 {
 	unsigned int long num = 612852475143;
-	unsigned int long count = int sqrt(num);
+	unsigned int long count = (int) sqrt(num);
 
 	while (1)
 	{
 		if (num % count == 0)
 		{
-			printf("%lu\n", num / count);
+			printf("%lu \n", num / count);
 			break;
 		}
 		count--;
+
 	}
 	return (0);
 }
