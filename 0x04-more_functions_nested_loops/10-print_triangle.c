@@ -11,9 +11,9 @@ void print_triangle(int size)
 	int i = 1;
 	int j;
 
-	if ( size > 0)
+	if (size > 0)
 	{
-		while ( i <= size)
+		while (i <= size)
 		{
 			j = 0;
 			while (j < size - i)
