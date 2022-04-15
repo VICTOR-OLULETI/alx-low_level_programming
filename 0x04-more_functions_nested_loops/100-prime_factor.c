@@ -15,7 +15,7 @@ int main(void)
 
 	while (1)
 	{
-		if (num % count = sqrt(num);
+		if (num % count == 0)
 		{
 			printf("%lu\n", num / count);
 			break;
