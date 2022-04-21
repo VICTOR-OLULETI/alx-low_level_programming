@@ -10,31 +10,18 @@
 
 int _atoi(char *s)
 {
-	int len;
-	int num;
+	int len, num, neg;
 
-	if (s[0] == '-')
-	{
-		s[0] = '0';
-		printf("-");
-	}
-	if (s[0] == '+')
-	{
-		s[0] = '0';
-		printf("+");
-	}
-
-	for (len = 0; s[len] != '\0'; len++)
-	{
-		if (s[len] >= '0' && s[len] <= '9')
-		{
-			num = num * 10 + (s[len] -'0');
-		}
-		else
-		{
-			num = 0;
-			break;
-		}
-	}
+	num = 0;
+	neg = s[0] == '-';
+	len = neg ? 1 : 0;
+	while (s[len] >= '0' && s[len] <= '9')
+       	{
+		num = num * 10 + (s[len] -'0');
+	       	len++;
+       	}
+	if (neg)
+		num *= -1;
+	printf("%d\n", num);
 	return (0);
 }
