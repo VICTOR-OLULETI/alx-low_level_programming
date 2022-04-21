@@ -23,7 +23,7 @@ int _atoi(char *s)
 
 		}
 
-		while (s[len] >= '0' && s[len] <= '9')
+		while (s[len] >= 48  && s[len] <= 57)
 		{
 			i = 1;
 			num = num * 10 + (s[i] -'0');
@@ -34,11 +34,10 @@ int _atoi(char *s)
 		{
 			break;
 		}
+		len++;
 	}
 
-	if (sign == - 1)
-		num *= -1;
-	len++;
+	num *= sign;
 
 	return (num);
 }
