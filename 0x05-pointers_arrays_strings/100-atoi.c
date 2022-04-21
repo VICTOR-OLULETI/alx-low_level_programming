@@ -13,14 +13,14 @@ int _atoi(char *s)
 	int len;
 	int num;
 
-	if (s[0] = "-")
+	if (s[0] = '-')
 	{
-		s[0] = "0";
+		s[0] = '0';
 		printf("-");
 	}
-	if (s[0] = "+")
+	if (s[0] = '+')
 	{
-		s[0] = "0";
+		s[0] = '0';
 		printf("+");
 	}
 
