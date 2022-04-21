@@ -9,12 +9,12 @@
 
 void rev_string(char *s)
 {
-	int j, i , half;
+	int j, i, half;
 	char temp;
 
-	for (i = 0; s[i] != '\0'; i++)
-		;
-
+	i = 0;
+	while (s[i])
+		i++;
 	half = i / 2;
 	j = 0;
 
