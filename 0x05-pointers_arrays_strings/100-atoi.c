@@ -13,12 +13,12 @@ int _atoi(char *s)
 	int len;
 	int num;
 
-	if (s[0] = '-')
+	if (s[0] == '-')
 	{
 		s[0] = '0';
 		printf("-");
 	}
-	if (s[0] = '+')
+	if (s[0] == '+')
 	{
 		s[0] = '0';
 		printf("+");
@@ -28,7 +28,7 @@ int _atoi(char *s)
 	{
 		if (s[len] >= '0' && s[len] <= '9')
 		{
-			num = num * 10 + (int (s[len]) - 48);
+			num = num * 10 + (s[len] -'0');
 		}
 		else
 		{
