@@ -32,7 +32,7 @@ void puts_half(char *str)
 	else
 	{
 		n = (len - 1) / 2;
-		//n += 1;
+
 		while (n <= i)
 		{
 			_putchar(str[n]);
