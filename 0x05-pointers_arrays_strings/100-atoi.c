@@ -10,17 +10,35 @@
 
 int _atoi(char *s)
 {
-	int len, num, neg;
+	int len, num, sign;
+	unsigned int num = 0;
 
-	num = 0;
-	neg = s[0] == '-';
-	len = neg ? 1 : 0;
-	while (s[len] >= '0' && s[len] <= '9')
-       	{
-		num = num * 10 + (s[len] -'0');
-	       	len++;
-       	}
-	if (neg)
+	sign = 1;
+	len = 0;
+	while (s[len])
+	{
+		if (s[len] == 45)
+		{
+			sign *= -1;
+
+		}
+
+		while (s[len] >= '0' && s[len] <= '9')
+		{
+			i = 1;
+			num = num * 10 + (s[i] -'0');
+			len++;
+
+		}
+		if (i == 1)
+		{
+			break;
+		}
+	}
+
+	if (sign == - 1)
 		num *= -1;
+	len++;
+
 	return (num);
 }
