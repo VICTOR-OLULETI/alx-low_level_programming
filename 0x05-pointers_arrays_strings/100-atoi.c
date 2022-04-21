@@ -22,6 +22,5 @@ int _atoi(char *s)
        	}
 	if (neg)
 		num *= -1;
-	printf("%d\n", num);
-	return (0);
+	return (num);
 }
