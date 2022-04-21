@@ -36,4 +36,5 @@ int _atoi(char *s)
 			break;
 		}
 	}
+	return (0);
 }
