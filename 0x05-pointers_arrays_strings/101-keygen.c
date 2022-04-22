@@ -3,20 +3,20 @@
 #include <stdlib.h>
 #include <time.h>
 
-void randomPassword(int N)
+void randomPassword(void)
 {
 	int i = 0;
 	int randomizer = 0;
         char numbers[11] = "0123456789";
 	char letter[27] = "abcdefghijklmnopqrstuvwxyz";
 	char LETTER[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[] = "!@#$^&*?";
-	char password[N];
+	char symbols[9] = "!@#$^&*?";
+	char password[14];
 
 	srand((unsigned int)(time(NULL)));
 
 	randomizer = rand() % 4;
-	for (i = 0; i < N; i++)
+	for (i = 0; i < 14; i++)
 	{
 		if (randomizer == 1)
 		{
