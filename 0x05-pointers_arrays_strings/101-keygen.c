@@ -7,10 +7,10 @@ void randomPassword(int N)
 {
 	int i = 0;
 	int randomizer = 0;
-        char numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char SYMBOLS[] = "!@#$^&*?";
+        char numbers[11] = "0123456789";
+	char letter[27] = "abcdefghijklmnopqrstuvwxyz";
+	char LETTER[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char symbols[] = "!@#$^&*?";
 	char password[N];
 
 	srand((unsigned int)(time(NULL)));
