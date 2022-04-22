@@ -19,14 +19,14 @@ int _atoi(char *s)
 	{
 		if (s[len] == '-')
 		{
-			sign *= - 1;
+			sign *= -1;
 
 		}
 
-		while (s[len] >= '0'  && s[len] <= '9')
+		while (s[len] >= '0' && s[len] <= '9')
 		{
 			i = 1;
-			num = num * 10 + (s[len] -'0');
+			num = num * 10 + (s[len] - '0');
 			len++;
 
 		}
