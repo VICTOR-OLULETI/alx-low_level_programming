@@ -11,7 +11,6 @@
 
 int main(void)
 {
-	int i = 0;
 	int index = 0, sum = 0, diff_half1, diff_half2;
 	char password[84];
 
