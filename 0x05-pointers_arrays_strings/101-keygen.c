@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void randompassword(int N)
+void randomPassword(int N)
 {
 	int i = 0;
 
@@ -11,7 +11,7 @@ void randompassword(int N)
 
 	srand((unsigned int)(time(NULL)));
 
-	char numbers[] = "0123456789";
+	char numbers[10] = "0123456789";
 	char letter[] = "abcdefghijklmnopqrstuvwxyz";
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char SYMBOLS[] = "!@#$^&*?";
