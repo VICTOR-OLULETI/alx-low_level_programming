@@ -9,7 +9,7 @@ int main(void)
 	int randomizer = 0;
 	char letter[27] = "abcdefghijklmnopqrstuvwxyz";
 	char LETTER[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char password[5];
+	char password[6];
 
 	srand((unsigned int)(time(NULL)));
 
