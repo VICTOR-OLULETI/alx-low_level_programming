@@ -14,7 +14,7 @@ int main(void)
 	srand((unsigned int)(time(NULL)));
 
 	randomizer = rand() % 2;
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 6; i++)
 	{
 	        if (randomizer == 1)
 		{
