@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void randomPassword(void)
+int main(void)
 {
 	int i = 0;
 	int randomizer = 0;
@@ -42,5 +42,7 @@ void randomPassword(void)
 			randomizer = rand() % 4;
 			printf("%c", password[i]);
 		}
+
 	}
+	return (0);
 }
