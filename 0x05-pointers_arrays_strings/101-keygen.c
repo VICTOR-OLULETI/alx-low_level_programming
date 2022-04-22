@@ -6,16 +6,14 @@
 void randomPassword(int N)
 {
 	int i = 0;
-
 	int randomizer = 0;
-
-	srand((unsigned int)(time(NULL)));
-
-	char numbers[10] = "0123456789";
+        char numbers[] = "0123456789";
 	char letter[] = "abcdefghijklmnopqrstuvwxyz";
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char SYMBOLS[] = "!@#$^&*?";
 	char password[N];
+
+	srand((unsigned int)(time(NULL)));
 
 	randomizer = rand() % 4;
 	for (i = 0; i < N; i++)
