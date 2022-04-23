@@ -16,11 +16,11 @@ char *_strncat(char *dest, char *src, int n)
 	int j, l;
 	int sum;
 
-	sum = i + n;
 	while(dest[i])
 	{
 		i++;
 	}
+	sum = i + n;
 
 	l = 0;
 	for (j = i; j < sum; j++)
@@ -28,7 +28,6 @@ char *_strncat(char *dest, char *src, int n)
 		dest[j] = src[l];
 		l++;
 	}
-	dest[sum] = '\0';
 
 	return (dest);
 }
