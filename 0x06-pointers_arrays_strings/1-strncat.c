@@ -14,18 +14,17 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0;
 	int j;
-	int sum;
 
 	while(dest[i])
 	{
 		i++;
 	}
-	sum = i + j;
+
 	for (j = 0; j < n && src[j] != '\0'; j++)
 	{
-		dest[sum] = src[j];
+		dest[i + j] = src[j];
 	}
-	dest[sum++] = '\0';
+	dest[i + j] = '\0';
 
 	return (dest);
 }
