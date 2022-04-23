@@ -1,0 +1,34 @@
+#include "main.h"
+
+/**
+ * *_strcat - function joins two strings together
+ * @dest: first string
+ * @src: second string
+ *
+ * Return: Always char
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int n, l, k;
+	int i = 0;
+	int j = 0;
+
+	while (dest[i])
+	{
+		i++;
+	}
+	while (src[j])
+	{
+		j++;
+	}
+	n = i + j;
+	l = 0;
+	for (k = i; k < n; k++)
+	{
+		dest[k] = src[l];
+		l++;
+	}
+
+	return (dest);
+}
