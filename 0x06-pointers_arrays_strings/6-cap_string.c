@@ -11,16 +11,20 @@
 char *cap_string(char *s)
 {
 	int i;
+	char sep[] = ",;. !?\"(){}\t;\n;";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
 		{
 			s[0] = s[0] - 32;
-			if (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+			for (k = 0; sep[k] != '\0'; k++)
 			{
-				i++;
-				s[i] = s[i] - 32;
+				if (s[i] == sep[k])
+				{
+					i++;
+					s[i] = s[i] - 32;
+				}
 			}
 		}
 	}
