@@ -11,7 +11,7 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i, j, k, n;
-	unsigned int diff = 0;
+	signed int diff = 0;
 
 	for (i = 0; s1[i] != '\0'; i++)
 		;
