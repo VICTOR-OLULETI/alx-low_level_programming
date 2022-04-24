@@ -15,9 +15,9 @@ char *leet(char *str)
 	char s2[] = "AEOTL";
 	char num[] = "43071";
 
-	for(i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-	       	for (k = 0, s[k] != '\0'; k++)
+	       	for (k = 0, k < 5; k++)
 		{
 			if ((str[i] == s[k]) || (str[i] == s2[k]))
 			{
