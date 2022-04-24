@@ -15,6 +15,7 @@ char *cap_string(char *s)
 
 	for(i = 0; s[i] != '\0'; i++)
 	{
+		capital = 0;
 		if (i == 0)
 		{
 			capital = 1;
