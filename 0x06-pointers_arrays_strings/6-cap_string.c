@@ -13,7 +13,7 @@ char *cap_string(char *str)
 	int i, k, capital;
 	char sep[] = ",\t;\n; .!?\"(){}";
 
-	for(i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		capital = 0;
 		if (i == 0)
@@ -22,7 +22,7 @@ char *cap_string(char *str)
 		}
 		else
 		{
-			for(k = 0; sep[k] != '\0'; k++)
+			for (k = 0; sep[k] != '\0'; k++)
 			{
 				if (str[i - 1] == sep[k])
 				{
@@ -36,7 +36,7 @@ char *cap_string(char *str)
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				str[i] -= ('a' - 'A');
+				str[i] -= 32;
 			}
 		}
 	}
