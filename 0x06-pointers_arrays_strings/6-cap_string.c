@@ -10,8 +10,8 @@
 
 char *cap_string(char *s)
 {
-	int i;
-	char sep[18] = ",;. !?\"(){}\t;\n;";
+	int i, k;
+	char sep[] = ",;. !?\"(){}\t;\n;";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
