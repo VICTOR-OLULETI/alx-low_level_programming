@@ -11,21 +11,37 @@
 char *cap_string(char *s)
 {
 	int i, k;
+	int capital = 0;
 	char sep[] = ",;. !?\"(){}\t;\n;";
 
-	s[0] = s[0] - 32;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if(s[i] >= 'a' && s[i] <= 'z')
+		if (i == 0)
 		{
+			capital = 1;
+		}
+		else
+		{
+
 			for (k = 0; sep[k] != '\0'; k++)
 			{
 				if (s[i - 1] == sep[k])
 				{
-					s[i] = s[i] - 32;
+					capital = 1;
+					break;
 				}
 			}
 		}
+
+		if (capital == 1)
+		{
+			if (s[i] >= 'a' && s[i] <= 'z')
+			{
+				s[i] = s[i] - 32;
+			}
+		}
 	}
+
 	return (s);
 }
