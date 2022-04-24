@@ -10,7 +10,7 @@
 
 char *leet(char *str)
 {
-	int i;
+	int i, k;
 	char let[] = "aeotl";
 	char let2[] = "AEOTL";
 	char num[] = "43071";
