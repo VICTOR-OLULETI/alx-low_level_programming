@@ -19,7 +19,7 @@ char *leet(char *str)
 	{
 	       	for (k = 0, let[k] != '\0'; k++)
 		{
-			if (str[i] == let2[k] || str[i] == let[k])
+			if ((str[i] == let2[k]) || (str[i] == let[k]))
 			{
 				str[i] = num[k];
 			}
