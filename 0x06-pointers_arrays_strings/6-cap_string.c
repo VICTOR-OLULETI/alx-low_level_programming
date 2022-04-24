@@ -3,17 +3,17 @@
 /**
  * *cap_string - function that capitalizes all words of a string
  *
- * @s: the string entered
+ * @str: the string entered
  *
  * Return: Always char.
  */
 
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
 	int i, k, capital;
 	char sep[] = ",\t;\n; .!?\"(){}";
 
-	for(i = 0; s[i] != '\0'; i++)
+	for(i = 0; str[i] != '\0'; i++)
 	{
 		capital = 0;
 		if (i == 0)
@@ -24,7 +24,7 @@ char *cap_string(char *s)
 		{
 			for(k = 0; sep[k] != '\0'; k++)
 			{
-				if (s[i - 1] == sep[k])
+				if (str[i - 1] == sep[k])
 				{
 					capital = 1;
 					break;
@@ -34,11 +34,11 @@ char *cap_string(char *s)
 
 		if (capital == 1)
 		{
-			if (s[i] >= 'a' && s[i] <= 'z')
+			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				s[i] = s[i] - 32;
+				str[i] -= ('a' - 'A');
 			}
 		}
 	}
-	return (s);
+	return (str);
 }
