@@ -19,7 +19,7 @@ char *leet(char *str)
 	{
 	       	for (k = 0; k < 5; k++)
 		{
-			if ((str[i] == s[k]) || (str[i] == s2[k]))
+			if (str[i] == s[k] || str[i] == s2[k])
 			{
 				str[i] = num[k];
 				break;
