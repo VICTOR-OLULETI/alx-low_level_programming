@@ -11,7 +11,7 @@
 char *cap_string(char *s)
 {
 	int i;
-	char sep[] = ",;. !?\"(){}\t;\n;";
+	char sep[18] = ",;. !?\"(){}\t;\n;";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
