@@ -7,7 +7,7 @@
  * @n: the number of bytes of the second string to be
  * concatenated
  *
- * Return: Always char.
+ * Return: Always void.
  */
 
 char *_strncat(char *dest, char *src, int n)
