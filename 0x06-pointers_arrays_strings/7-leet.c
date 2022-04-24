@@ -17,7 +17,7 @@ char *leet(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-	       	for (k = 0, k < 5; k++)
+	       	for (k = 0; k < 5; k++)
 		{
 			if ((str[i] == s[k]) || (str[i] == s2[k]))
 			{
