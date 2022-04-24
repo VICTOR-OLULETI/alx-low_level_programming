@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *leet - function that encodes a string into 1337
+ * leet - function that encodes a string into 1337
  *
  * @str: string to be encoded
  *
@@ -21,6 +21,7 @@ char *leet(char *str)
 		{
 			if (str[i] == s[k] || str[i] == s2[k])
 			{
+
 				str[i] = num[k];
 				break;
 			}
