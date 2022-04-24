@@ -17,8 +17,8 @@ char *rot13(char *str)
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if ((str[i] >= 'a' && str[i] <= 'z')
-			    || (str[i] >= 'A' && str[i] <= 'Z')
+			if (((str[i] >= 'a' && str[i] <= 'z')
+			     || (str[i] >= 'A' && str[i] <= 'Z'))
 			    && str[i] == input[j])
 			{
 				str[i] = output[j];
