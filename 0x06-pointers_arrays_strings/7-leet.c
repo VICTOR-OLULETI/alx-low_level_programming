@@ -11,17 +11,18 @@
 char *leet(char *str)
 {
 	int i, k;
-	char let[] = "aeotl";
-	char let2[] = "AEOTL";
+	char s[] = "aeotl";
+	char s2[] = "AEOTL";
 	char num[] = "43071";
 
 	for(i = 0; str[i] != '\0'; i++)
 	{
-	       	for (k = 0, let[k] != '\0'; k++)
+	       	for (k = 0, s[k] != '\0'; k++)
 		{
-			if ((str[i] == let2[k]) || (str[i] == let[k]))
+			if ((str[i] == s[k]) || (str[i] == s2[k]))
 			{
 				str[i] = num[k];
+				break;
 			}
 		}
 	}
