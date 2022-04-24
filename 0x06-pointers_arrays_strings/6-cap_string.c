@@ -11,12 +11,14 @@
 char *cap_string(char *s)
 {
 	int i, k;
-	int capital = 0;
+	int capital;
 	char sep[] = ",;. !?\"(){}\t;\n;";
 
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		capital = 0;
+
 		if (i == 0)
 		{
 			capital = 1;
