@@ -10,23 +10,18 @@
 
 char *cap_string(char *s)
 {
-	int i, k;
-	int capital;
+	int i, k, capital;
 	char sep[] = ",;. !?\"(){}\t;\n;";
 
-
-	for (i = 0; s[i] != '\0'; i++)
+	for(i = 0; s[i] != '\0'; i++)
 	{
-		capital = 0;
-
 		if (i == 0)
 		{
 			capital = 1;
 		}
 		else
 		{
-
-			for (k = 0; sep[k] != '\0'; k++)
+			for(k = 0; sep[k] != '\0'; k++)
 			{
 				if (s[i - 1] == sep[k])
 				{
@@ -44,6 +39,5 @@ char *cap_string(char *s)
 			}
 		}
 	}
-
 	return (s);
 }
