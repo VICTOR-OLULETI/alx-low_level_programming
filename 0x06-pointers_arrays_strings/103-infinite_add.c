@@ -19,7 +19,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (i <= size_r)
 		{
 			r[i] = n1[i] + n2[i];
-			return (r);
 		}
 		else
 		{
@@ -27,4 +26,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			break;
 		}
 	}
+	return (r);
 }
