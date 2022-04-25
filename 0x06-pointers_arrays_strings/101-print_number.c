@@ -21,9 +21,8 @@ void print_number(int n)
 
 	k = n;
 
-	k /= 10;
-	if (k != 0)
-		print_number(k);
+	if (k / 10)
+		print_number(k / 10);
 
 	_putchar(k % 10 + '0');
 }
