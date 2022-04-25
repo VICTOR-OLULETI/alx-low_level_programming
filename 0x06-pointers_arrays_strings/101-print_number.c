@@ -4,25 +4,24 @@
 /**
  * print_number - function that prints an integer
  *
- *
+ * @n: n is the integer
  * Return: Always void.
  */
 
 void print_number(int n)
 {
-	int divisor = 1, i, respo;
+	unsigned int k = n;
 
 	if (n < 0)
 	{
-		_putchar('-');
 		n *= -1;
+		k = n;
+		_putchar('-');
 	}
 
-	for (i = 0; n / divisor > 9; i++, divisor *= 10)
-		;
-	for(; divisor >= 1; n %= divisor, divisor /= 10)
-	{
-		respo = n / divisor;
-		_putchar('0' + respo);
-	}
+	k /= 10;
+	if (k != 0)
+		print_number(k);
+
+	_putchar((unsigned int) n % 10 + '0'));
 }
