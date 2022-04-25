@@ -5,13 +5,13 @@
  * print_number - function that prints an integer
  *
  * @n: the integer to be printed.
+ *
  * Return: Always void.
  */
 
 void print_number(int n)
 {
-	int divisor = 1;
-	int i, resp;
+	unsigned int k;
 
 	if (n < 0)
 	{
@@ -19,12 +19,11 @@ void print_number(int n)
 		n *= -1;
 	}
 
-	for (i = 0; n / divisor > 9; i++, divisor *= 10)
-       	;
+	k = n;
 
-	for (; divisor >= 1; n %= divisor, divisor /= 10)
-	{
-		resp = n / divisor;
-		_putchar('0' + resp);
-	}
+	k /= 10;
+	if (k != 0)
+		print_number(k);
+
+	_putchar(k % 10 + '0');
 }
