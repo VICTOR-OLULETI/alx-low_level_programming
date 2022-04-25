@@ -14,13 +14,24 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i;
 
-
-	for (i = 0; n1[i] != '\0' || n2[i] != '\0'; i++)
+	for (i = 0; n1[i] = '\0'; i++)
+		;
+	for (j = 0; n2[j] = '\0'; j++)
+		;
+	if (i > j)
 	{
-		r[i] = n1[i] + n2[i];
+		n = i;
 	}
-	if (i < size_r)
+	else
+		n = j;
+	if (size_r >= n)
+	{
+		for (i = 0; i < size_r; i++)
+		{
+			r[i] = n1[i] + n2[i];
+		}
 		return (r);
+	}
 	else
 		return (0);
 }
