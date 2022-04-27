@@ -4,6 +4,8 @@
  * set_string - sets pointer val to char
  * @s: pointer
  * @to: char
+ *
+ * Return: Always void
  */
 
 void set_string(char **s, char *to)
