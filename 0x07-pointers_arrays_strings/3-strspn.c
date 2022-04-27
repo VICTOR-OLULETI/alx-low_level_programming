@@ -3,14 +3,14 @@
 /**
  * _strspn - function that gets the length of a prefix substring
  * @s: array of characters
- * @accept: array of character
+ * @accept: substring character
  *
- * Return: Always 0.
+ * Return: Length of occurrence.
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, k = 0, n = 0;
+	unsigned int i, j, k = 0;
 
 	for (i = 0; accept[i] != '\0'; i++)
 	{
@@ -18,15 +18,11 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (accept[i] == s[j])
 			{
-				k = 1;
+				k++;
 				break;
 			}
-			else
-			{
-				k = 0;
-			}
 		}
-		n += k;
+
 	}
-	return (n);
+	return (k);
 }
