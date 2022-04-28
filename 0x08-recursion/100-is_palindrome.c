@@ -22,7 +22,7 @@ int _strlen_recursion(char *s)
  * Return: either 0 or 1
  */
 
-int is_palin(char *s, int i, int len)
+int is_palin(char *s, int len)
 {
 	if (len < 1)
 	{
