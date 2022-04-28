@@ -17,20 +17,21 @@ int _strlen_recursion(char *s)
 
 /**
  * is_palin - function that returns 1 if palindrome
- * @i: i is the integer parameter
  * @len: len is the length of the string
  * @s: s is the string parameter
+ * Return: either 0 or 1
  */
 
 int is_palin(char *s, int i, int len)
 {
-	if (i <= len && len >= i)
+	if (len < 1)
 	{
-		if (s[i] == s[len])
-		{
-			is_palin(s, i + 1, len - 1);
-			return (1);
-		}
+		return (1);
+	}
+	if (*s == *(s + len))	
+	{
+		is_palin(s + 1, len - 2);
+		return (1);
 	}
 	return (0);
 }
@@ -46,5 +47,5 @@ int is_palindrome(char *s)
 	int len;
 
 	len = _strlen_recursion(s);
-	return (is_palin(s, 0, len - 1));
+	return (is_palin(s, len - 1));
 }
