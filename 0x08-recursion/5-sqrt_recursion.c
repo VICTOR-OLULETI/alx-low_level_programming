@@ -8,20 +8,27 @@
 
 int _sqrt_recursion(int n)
 {
-	int i = 1;
+	return (_sqrt(int n, 1));
+}
 
+/**
+ * _sqrt - calculates the natural square and returns the value
+ * to the function _sqrt_recursion
+ * @n : n is the number whose squre root is being determined
+ * @i : i is used to determine the square root
+ * Return: square root
+ */
+
+int _sqrt(int n, int i)
+{
 	if (n / i == i)
 	{
 		return (i);
 	}
-	else if (i >= n)
+	if (i >= n)
 	{
 		return (-1);
 	}
-	else
-	{
-		i++;
-		return (_sqrt_recursion(n));
-	}
+	return (_sqrt(n, i + 1));
 }
 	
