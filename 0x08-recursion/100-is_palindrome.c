@@ -30,7 +30,7 @@ int is_palin(char *s, int len)
 	}
 	if (*s == *(s + len))
 	{
-		is_palin(s + 1, len - 2);
+		return (is_palin(s + 1, len - 2));
 	}
 	return (0);
 }
