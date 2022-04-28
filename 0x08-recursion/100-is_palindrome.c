@@ -28,7 +28,7 @@ int is_palin(char *s, int len)
 	{
 		return (1);
 	}
-	if (*s == *(s + len))	
+	if (*s == *(s + len))
 	{
 		is_palin(s + 1, len - 2);
 	}
