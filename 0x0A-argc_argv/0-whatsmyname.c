@@ -11,7 +11,7 @@
 
 int main(int argc, char* argv[])
 {
-	argc _attribute_((unused));
+	void(argc);
 	printf("%s\n", argv[0]);
 	return (0);
 }
