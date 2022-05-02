@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, mul = 1;
+	int mul = 1;
 
 	if (argc == 3)
 	{
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
-		return (-1);
+		return (1);
 	}
 }
 
