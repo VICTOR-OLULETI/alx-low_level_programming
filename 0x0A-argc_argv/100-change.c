@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 /**
  * main - prints the minimum number of coins to make change
@@ -54,4 +55,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", cent);
 	return (0);
 }
-
