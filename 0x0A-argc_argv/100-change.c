@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int cent = 0, num;
 
-	num = atoi(argv[0]);
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
+	num = atoi(argv[0]);
 	if (num % 25 >= 0)
 	{
 		cent += num / 25;
