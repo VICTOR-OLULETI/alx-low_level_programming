@@ -13,9 +13,9 @@
 
 int main(int argc, char *argv[])
 {
-	int cent = 0, num;
+	int cent, num;
 
-
+	cent = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
