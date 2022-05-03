@@ -20,12 +20,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	num = atoi(argv[0]);
 	if (num < 0)
 	{
 		printf("%d\n", 0);
 		return (0);
 	}
-	num = atoi(argv[0]);
 	if (num % 25 >= 0)
 	{
 		cent += num / 25;
