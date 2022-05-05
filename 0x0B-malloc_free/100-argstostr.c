@@ -27,7 +27,7 @@ int _strlen(char *s)
 
 char *argstostr(int ac, char **av)
 {
-	int i = 0; nc = 0, j = 0, cmp = 0;
+	int i = 0, nc = 0, j, cmp = 0;
 	char *s;
 
 	if (ac == 0 || av == NULL)
