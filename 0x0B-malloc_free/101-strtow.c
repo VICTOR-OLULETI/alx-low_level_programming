@@ -3,7 +3,7 @@
 /**
  * strtow - char
  * @str: pointer to string params
- * Return: char 
+ * Return: char
  */
 
 char **strtow(char *str)
