@@ -1,95 +1,88 @@
 #include "main.h"
 #include "stdlib.h"
-#include "stdio.h"
 
 /**
- * word_len - finds the length of a word
- * @str: string to test
+ * str_count - counts
+ * @str: string character
  *
- * Return: int
+ * Return: Always int;
  */
-
-int word_len(char *str)
+int str_count(char *str)
 {
-	int i = 0, len = 0;
+	int i = 0, count = 0;
 
-	while (*(str + i) && *(str + i) != ' ')
-	{
-		len++;
-		i++;
-	}
-	return (len);
-}
-
-/**
- * word_count - counts the number of words
- *
- * @str: inut
- *
- * Return: number of words
- *
- */
-
-int word_count(char *str)
-{
-	int i = 0, len = 0, count = 0;
-
-	for(i = 0; *(str + i); i++)
-		len++;
-	for (i = 0; i < len; i++)
+	while (*(str + i))
 	{
 		if (*(str + i) != ' ')
 		{
-			count++;
-			i += word_len(str + i);
+			if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
+			{
+				count += 1;
+			}
 		}
+		i++;
 	}
 	return (count);
 }
 
 /**
- * strtow - splits a string into words
+ * str_len - length 
+ * @str: string character
  *
- * @str: input
- *
- * Return: 0 - success
- *
+ * Return: Always int.
+ */
+int str_len(char *str)
+{
+	int len = 0;
+	while (*str == ' ' && *str)
+		str++;
+	len = 0;
+	while (*(str + len) != ' ' && *(str + len))
+		len += 1;
+	return (len);
+}
+
+/**
+ * *strtow - char
+ * @str: pointer to string params
+ * Return: char
  */
 
 char **strtow(char *str)
 {
-	int i, words, w, letters, l;
-	char **p;
+	int i = 0, j = 0, k= 0;
+	int len = 0, count = 0;
+	char **f, *col;
 
-	if (str == NULL || str[0] == '\0')
+	if (!str || !*str)
+		return (NULL);
+	count = str_count(str);
+	if (count == 0)
+		return (NULL);
+	count++;
+	f = malloc(sizeof(char *) * count);
+	if (!f)
+		return (NULL);
+	while (*str)
 	{
-		return (NULL);
-	}
-	words = word_count(str);
-	if (words == 0)
-		return (NULL);
-	p = malloc(sizeof(char *) * (words + 1));
-	if (p == NULL)
-		return (NULL);
-	for (i = 0; i < words; i++)
-	{
-		while (*(str + w) == ' ')
-			w++;
-		letters = word_len(str + w);
-		p[i] = malloc(sizeof(char) * (letters + 1));
-		if (p[i] == NULL)
+		len = str_len(s);
+		len++;
+		col = malloc(sizeof(char) * len);
+		if (!col)
 		{
-			for (; i >= 0; i--)
-				free(p[i]);
-			free(p);
+			for (k = j - 1; k >= 0; k--)
+				free(f[k]);
+			free(f);
 			return (NULL);
 		}
-		for (i = 0; l < letters; l++)
-		{
-			p[i][l] = str[w++];
-		}
-		p[i][l] = '\0';
+		for (k = 0; k < (len - 1); k++)
+			*(col + k) = *(str++);
+		*(col + k) = '\0';
+		*(f + j) = col;
+		if (j < count - 1)
+			j++;
 	}
-	p[i] = NULL;
-	return (p);
+		*(f + j) = NULL;
+		return (f);
 }
+
