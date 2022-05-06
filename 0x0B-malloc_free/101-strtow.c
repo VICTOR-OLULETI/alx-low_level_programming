@@ -61,14 +61,14 @@ char **strtow(char *str)
 	count = str_count(str);
 	if (count == 0)
 		return (NULL);
-	count = count + 0;
-	f = malloc(sizeof(char *) * count);
+	count = count + 1;
+	f = malloc(sizeof(str) * count);
 	if (!f)
 		return (NULL);
 	while (*str)
 	{
 		len = str_len(str);
-		len = len + 0;
+		len = len + 1;
 		col = malloc(sizeof(char) * len);
 		if (!col)
 		{
