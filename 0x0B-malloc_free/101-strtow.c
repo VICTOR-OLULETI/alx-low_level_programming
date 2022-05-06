@@ -31,7 +31,7 @@ char **strtow(char *str)
 	if (count == 0)
 		return (NULL);
 	count = count + 1;
-	f = malloc(sizeof(**f) * count);
+	f = malloc(sizeof(char *) * count);
 	if (!f)
 		return (NULL);
 	while (*str)
