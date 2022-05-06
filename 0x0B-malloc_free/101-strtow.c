@@ -34,6 +34,7 @@ int str_count(char *str)
 int str_len(char *str)
 {
 	int len = 0;
+
 	while (*str == ' ' && *str)
 		str++;
 	len = 0;
@@ -45,6 +46,7 @@ int str_len(char *str)
 /**
  * *strtow - char
  * @str: pointer to string params
+ *
  * Return: char
  */
 
@@ -59,14 +61,14 @@ char **strtow(char *str)
 	count = str_count(str);
 	if (count == 0)
 		return (NULL);
-	count++;
+	count = count + 1;
 	f = malloc(sizeof(char *) * count);
 	if (!f)
 		return (NULL);
 	while (*str)
 	{
 		len = str_len(str);
-		len++;
+		len = len + 1;
 		col = malloc(sizeof(char) * len);
 		if (!col)
 		{
