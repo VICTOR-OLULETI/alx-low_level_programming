@@ -53,7 +53,7 @@ int str_len(char *str)
 char **strtow(char *str)
 {
 	int j = 0, k= 0;
-	int len = 0, count = 0;
+	int len, count;
 	char **f, *col;
 
 	if (!str || !*str)
