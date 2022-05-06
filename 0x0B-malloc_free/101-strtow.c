@@ -65,7 +65,7 @@ char **strtow(char *str)
 		return (NULL);
 	while (*str)
 	{
-		len = str_len(s);
+		len = str_len(str);
 		len++;
 		col = malloc(sizeof(char) * len);
 		if (!col)
