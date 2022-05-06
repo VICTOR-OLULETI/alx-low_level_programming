@@ -2,15 +2,20 @@
 #include "stdlib.h"
 
 /**
- * str_count - counts
- * @str: string character
+ * *strtow - char
+ * @str: pointer to string params
  *
- * Return: Always int;
+ * Return: char
  */
-int str_count(char *str)
-{
-	int i = 0, count = 0;
 
+char **strtow(char *str)
+{
+	int i = 0, j = 0, k= 0;
+	int len = 0, count = 0;
+	char **f, *col;
+
+	if (!str || !*str)
+		return (NULL);
 	while (*(str + i))
 	{
 		if (*(str + i) != ' ')
@@ -22,43 +27,7 @@ int str_count(char *str)
 		}
 		i++;
 	}
-	return (count);
-}
 
-/**
- * str_len - length 
- * @str: string character
- *
- * Return: Always int.
- */
-int str_len(char *str)
-{
-	int len = 0;
-
-	while (*str == ' ' && *str)
-		str++;
-	len = 0;
-	while (*(str + len) != ' ' && *(str + len))
-		len += 1;
-	return (len);
-}
-
-/**
- * *strtow - char
- * @str: pointer to string params
- *
- * Return: char
- */
-
-char **strtow(char *str)
-{
-	int j = 0, k= 0;
-	int len, count;
-	char **f, *col;
-
-	if (!str || !*str)
-		return (NULL);
-	count = str_count(str);
 	if (count == 0)
 		return (NULL);
 	count = count + 1;
@@ -67,7 +36,17 @@ char **strtow(char *str)
 		return (NULL);
 	while (*str)
 	{
-		len = str_len(str);
+		while (*str == ' ' && *str)
+		{
+			str++;
+		}
+		len = 0;
+		
+		while (*(str + len) != ' ' && *(str + len))
+		{
+			len += 1;
+		}
+
 		len = len + 1;
 		col = malloc(sizeof(*col) * len);
 		if (!col)
@@ -77,7 +56,7 @@ char **strtow(char *str)
 			free(f);
 			return (NULL);
 		}
-		for (k = 0; k < (len - 1); k++)
+		for (k = 0; k < len - 1; k++)
 			*(col + k) = *(str++);
 		*(col + k) = '\0';
 		*(f + j) = col;
