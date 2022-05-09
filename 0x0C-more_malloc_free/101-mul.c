@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _puts - prints a string, follwed by a new line
- * @str: pointer to the string to print
- * 
- * Return: void
+ * _puts - prints a string
+ * @str: pointer
+ * Return: Always void;
  */
 
 void _puts(char *str)
@@ -18,9 +17,9 @@ void _puts(char *str)
 }
 
 /**
- * _atoi - convert a string to an integer
- * @s: char string
- * Return: integer converted
+ * _atoi - convert a string to a integer
+ * @s: char 
+ * Return: integer
  */
 
 int _atoi(const char *s)
@@ -35,20 +34,20 @@ int _atoi(const char *s)
 			sign *= -1;
 		}
 	}
+
 	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
 	{
 		resp *= 10;
 		resp += (s[i] - 48);
 	}
 
-	return (sign * resp)
+	return (sign * resp);
 }
 
 /**
- * print_int -prints an integer
+ * print_int - prints an integer
  * @n: int
- *
- * Return: 0
+ * Return: Always 0.
  */
 
 void print_int(unsigned long int n)
@@ -65,10 +64,9 @@ void print_int(unsigned long int n)
 }
 
 /**
- * main - print the result of the multiplication 
- * @argc: number of arguments
- * @argv: array of arguments
- *
+ * main - prints the result of multiplication
+ * @argc: int
+ * @argv: list
  * Return: 0
  */
 
@@ -83,8 +81,8 @@ int main(int argc, char const *argv[])
 	}
 	print_int(_atoi(argv[1]) * _atoi(argv[2]));
 	_putchar('\n');
-
 	return (0);
+
 }
 
 
@@ -93,4 +91,10 @@ int main(int argc, char const *argv[])
 
 
 
-*
+
+
+
+
+
+
+
