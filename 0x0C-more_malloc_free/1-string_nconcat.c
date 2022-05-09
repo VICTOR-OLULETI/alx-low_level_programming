@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * *string_nconcat - concattenates two strings
+ * *string_nconcat - concatenates two strings
  *
- * @s1 - fisrst string
+ * @s1 - first string
  * @s2 - second string
  * @n - number of character of the second string to be concatenated
  *
@@ -14,13 +14,13 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int len1, len2, i, j;
+	unsigned int len1, len2, i;
 
 	if (s1 == NULL)
-		s1 = " ";
+		s1 = "";
 
 	if (s2 == NULL)
-		s2 = " ";
+		s2 =  "";
 
 	for (len1 = 0; s1[len1] != '\0'; len1++)
 		;
@@ -39,9 +39,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 	}
 
-	for (j = 0; j < n; j++, i++)
+	for (; i < n + len1; i++)
 	{
-		p[i] = s2[j];
+		p[i] = s2[i - len1];
 	}
 
 	p[i] = '\0';
