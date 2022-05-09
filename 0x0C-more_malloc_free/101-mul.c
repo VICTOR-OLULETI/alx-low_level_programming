@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * _puts - prints a string, follwed by a new line
@@ -30,7 +28,7 @@ int _atoi(const char *s)
 	int sign = 1;
 	unsigned long int resp = 0, firstNum, i;
 
-	for (firstNum = 0; (s[firstNum] < 48 && s[firstNum] > 57); firstNum++)
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 	{
 		if (s[firstNum] == '-')
 		{
@@ -40,7 +38,7 @@ int _atoi(const char *s)
 	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
 	{
 		resp *= 10;
-		resp += s[i] - 48;
+		resp += (s[i] - 48);
 	}
 
 	return (sign * resp)
@@ -95,4 +93,4 @@ int main(int argc, char const *argv[])
 
 
 
-
+*
