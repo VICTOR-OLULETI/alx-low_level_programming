@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -21,11 +20,14 @@ int *array_range(int min, int max)
 
 	len = max - min + 1;
 	p = malloc(sizeof(int) * len);
+	if (!p)
+		return (NULL);
 
 	m = min;
-	for (i = 0; i < len; i++, m++)
+	for (i = 0; i < len; i++)
 	{
 		p[i] = m;
+		m++;
 	}
 
 	return (p);
