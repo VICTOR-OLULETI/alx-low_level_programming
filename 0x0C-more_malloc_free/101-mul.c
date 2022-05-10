@@ -11,6 +11,7 @@
 void _puts(char *str)
 {
 	int i = 0;
+
 	while (str[i])
 	{
 		_putchar(str[i]);
@@ -20,7 +21,7 @@ void _puts(char *str)
 
 /**
  * _atoi - convert a string to a integer
- * @s: char 
+ * @s: char
  * Return: integer
  */
 
@@ -86,17 +87,3 @@ int main(int argc, char const *argv[])
 	return (0);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
