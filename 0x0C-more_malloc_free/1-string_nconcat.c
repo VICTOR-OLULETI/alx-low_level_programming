@@ -7,7 +7,7 @@
  *
  * @s1 - first string
  * @s2 - second string
- * @n - number of character of the second string to be concatenated
+ * @n - number of character to be concatenated
  *
  * Return: a pointer or NULL
  */
@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > len2)
 		n = len2;
 
-	p = malloc(sizeof(char) * (len1 + n + 1));
+	p = malloc(sizeof(char) * (len1 + n));
 
 	if (p == NULL)
 		return (0);
@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 	}
 
-	for (; i < n + len1; i++)
+	for (; i < (n + len1); i++)
 	{
 		p[i] = s2[i - len1];
 	}
