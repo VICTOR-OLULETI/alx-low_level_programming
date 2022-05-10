@@ -4,9 +4,9 @@
 /**
  * *string_nconcat - concatenates two strings
  *
- * @s1 - first string
- * @s2 - second string
- * @n - number of character to be concatenated
+ * @s1: first string
+ * @s2: second string
+ * @n: number of character to be concatenated
  *
  * Return: a pointer or NULL
  */
@@ -14,9 +14,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int len1 = 0;
-	unsigned int len2 = 0;
-       	unsigned int i;
+	unsigned int len1 = 0, len2 = 0, i;
 
 	if (s1 == NULL)
 		s1 = "";
