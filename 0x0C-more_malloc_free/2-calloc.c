@@ -5,9 +5,9 @@
 /**
  * *_memset - set memory to zero
  *
- * @s - pointer
- * @b - character to be assigned
- * @n - number bytes
+ * @s: pointer
+ * @b: character to be assigned
+ * @n: number bytes
  *
  * Return: return a pointer
  */
