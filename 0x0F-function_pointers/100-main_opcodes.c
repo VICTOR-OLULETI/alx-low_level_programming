@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(98);
+		return (1);
 	}
 
 	nbytes = atoi(argv[1]);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	if (nbytes < 0)
 	{
 		printf("Error\n");
-		exit(99);
+		return (1);
 	}
 
 	for (i = 0; i < nbytes; i++)
