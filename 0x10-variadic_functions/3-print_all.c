@@ -33,7 +33,7 @@ void print_str(va_list ap)
 	if (s == NULL)
 		printf("(nil)");
 	else
-		printf("%s", va_arg(ap, char *));
+		printf("%s", s);
 }
 /**
  * print_float - print float
@@ -55,7 +55,8 @@ void print_float(va_list ap)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i = 0;
+	int i = 0, j = 0;
+	char *sep = "";
 
 	op_t ops[] = {
 		{"c", print_char},
@@ -66,18 +67,21 @@ void print_all(const char * const format, ...)
 	};
 	va_start(ap, format);
 
-	while (format && format[i++] != '\0')
+	while (format && format[i])
 	{
-		while (ops[i].op != NULL)
+		j = 0;
+		while (j < 4)
 		{
-			if (*ops[i].op == format[i])
+			if (*ops[j].op == format[i])
 			{
-				ops[i].func(ap);
-				if (format[i + 1] != '\0')
-					printf(",");
+				printf("%s", sep);
+				ops[j].func(ap);
+				sep = ", ";
 				break;
 			}
+			j++;
 		}
+		i++;
 
 	}
 	printf("\n");
