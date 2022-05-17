@@ -55,7 +55,7 @@ void print_float(va_list ap)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i = 0, j = 0;
+	int i = 0, j;
 	char *sep = "";
 
 	op_t ops[] = {
