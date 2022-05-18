@@ -30,10 +30,7 @@ void print_str(va_list ap)
 {
 	char *s = va_arg(ap, char *);
 
-	if (s == NULL)
-		printf("(nil)");
-	else
-		printf("%s", s);
+	s == NULL ? printf("(nil)") : printf("%s", s);
 }
 /**
  * print_float - print float
