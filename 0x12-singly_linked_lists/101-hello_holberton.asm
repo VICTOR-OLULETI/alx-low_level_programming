@@ -1,22 +1,16 @@
-; Filename: 101-hello_holberton.asm
-; Author: OLULETI VICTOR
+	SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-global _start
+	SECTION .text
+	extern printf
+	global main
 
-section .text
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-_start:
-	;write Hello holberton to screen
-	mov rax, 0x1 ;syscall for write
-	mov rdi, 0x1 ;fd for stdout
-	mov rsi, message
-	mov rdx, msglen
-	syscall
-
-	;exit
-	mov rax, 0x3c
-	mov rdi, 0x2
-	syscall
-section .data
-	message: db "Hello, Holberton", 0xA
-	msglen equ $-message
+	mov eax, 0
+	ret
