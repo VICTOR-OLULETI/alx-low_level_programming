@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _error - checks for errors
+ * error_file - checks for errors
  * @file_from: file to be copied
  * @file_to: file to be copied to
  * @argv: arguments
