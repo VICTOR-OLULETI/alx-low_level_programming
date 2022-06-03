@@ -69,7 +69,7 @@ void print_magic(unsigned char *e_ident)
  */
 void print_class(unsigned char *e_ident)
 {
-	printf("  Class:                           ");
+	printf("  Class:                             ");
 
 	switch (e_ident[EI_CLASS])
 	{
@@ -93,7 +93,7 @@ void print_class(unsigned char *e_ident)
  */
 void print_data(unsigned char *e_ident)
 {
-	printf("  Data:                            ");
+	printf("  Data:                              ");
 
 	switch (e_ident[EI_DATA])
 	{
@@ -117,7 +117,7 @@ void print_data(unsigned char *e_ident)
  */
 void print_version(unsigned char *e_ident)
 {
-	printf("  Version:                        %d", e_ident[EI_VERSION]);
+	printf("  Version:                           %d", e_ident[EI_VERSION]);
 	switch (e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
@@ -136,7 +136,7 @@ void print_version(unsigned char *e_ident)
  */
 void print_osabi(unsigned char *e_ident)
 {
-	printf("  OS/ABI:                          ");
+	printf("  OS/ABI:                            ");
 
 	switch (e_ident[EI_OSABI])
 	{
@@ -269,10 +269,10 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	int o, r;
+	int file_o, file_r;
 
-	o = open(argv[1], O_RDONLY);
-	if (o == -1)
+	file_o = open(argv[1], O_RDONLY);
+	if (file_o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
@@ -280,15 +280,15 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
-		close_elf(o);
+		close_elf(file_o);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	r = read(o, header, sizeof(Elf64_Ehdr));
-	if (r == -1)
+	file_r = read(file_o, header, sizeof(Elf64_Ehdr));
+	if (file_r == -1)
 	{
 		free(header);
-		close_elf(o);
+		close_elf(file_o);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
@@ -305,6 +305,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close_elf(o);
+	close_elf(file_o);
 	return (0);
 }
