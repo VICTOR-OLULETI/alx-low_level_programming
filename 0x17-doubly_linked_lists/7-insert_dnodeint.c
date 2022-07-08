@@ -11,7 +11,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *current;
 	dlistint_t *new;
-	
+
 	if (h == NULL)
 		return (0);
 	current = *h;
@@ -35,10 +35,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	}
 	new->n = n;
-	new->next = current;
-	new->prev = current->prev;
-	if (current->prev != NULL)
-		current->prev->next = new;
+	new->next = current->next;
+	current->next = new;
+	new->prev = current;
+	if (current->next != NULL)
+		current->next->prev = new;
 
-	return (current);
+	return (new);
 }
