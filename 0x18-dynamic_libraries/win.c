@@ -8,5 +8,5 @@
  */
 int win(void)
 {
-	printf("9 8 10 24 75 9");
+	printf("--> Please make me win!");
 }
