@@ -33,7 +33,7 @@ void hash_table_print(const hash_table_t *ht)
 				printf(", ");
 				for (; nodes; nodes = nodes->next)
 				{
-					printf("'%s': '%s'", nodes->key, nodes->value)
+					printf("'%s': '%s'", nodes->key, nodes->value);
 						if (nodes->next)
 							printf(", ");
 				}
