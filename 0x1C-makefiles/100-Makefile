@@ -6,7 +6,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: ${NAME} ${OBJ}
 
-${NAME}:: m.h
+${NAME}: ${OBJ} m.h
 	${CC} ${OBJ} -o ${NAME}
 
 clean::
