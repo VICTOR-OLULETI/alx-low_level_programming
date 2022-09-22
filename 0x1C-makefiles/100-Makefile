@@ -2,7 +2,6 @@ CC = gcc
 SRC = $(wildcard main.c school.c)
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
-RM = rm
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: ${NAME} ${OBJ}
