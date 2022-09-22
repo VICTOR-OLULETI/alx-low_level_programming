@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This program computes the perimeter of a list of list"""
 
+
 def island_perimeter(grid):
     """This function calculates the island perimeter"""
     if grid == []:
@@ -8,7 +9,7 @@ def island_perimeter(grid):
     per = 0
     try:
         col = len(grid[0])
-    except:
+    except IndexError:
         return (0)
 
     if (type(grid[0]) is not list):
