@@ -7,18 +7,26 @@ def island_perimeter(grid):
         return (0)
     per = 0
     try:
-        row = len(grid[0])
+        col = len(grid[0])
     except:
         return (0)
 
     if (type(grid[0]) is not list):
         return (0)
-    col = len(grid)
-    for rows in grid:
-        for columns in rows:
-            if (columns == 1):
-                per += 1
-
-    if (per):
-        per += 1
-    return (2 * per)
+    row = len(grid)
+    for i in range(row):
+        for j in range(col):
+            if (grid[i][j] == 1):
+                if j == col - 1:
+                    per += 1
+                if i == row - 1:
+                    per += 1
+                if ((j+1) < col and grid[i][j+1] == 0):
+                    per += 1
+                if ((j-1) >= 0 and grid[i][j-1] == 0):
+                    per += 1
+                if ((i-1) >= 0 and grid[i-1][j] == 0):
+                    per += 1
+                if ((i+1) < row and grid[i+1][j] == 0):
+                    per += 1
+    return (per)
