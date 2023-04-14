@@ -20,6 +20,7 @@ int binary_search(int *array, size_t size, int value)
 	{
 		return (-1);
 	}
+	m = floor((L + R) / 2);
 	while (L != R)
 	{
 		printf("Searching in array: ");
