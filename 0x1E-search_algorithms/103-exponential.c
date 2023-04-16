@@ -45,7 +45,9 @@ int binary_search_exp(int *array, size_t L, size_t R, int value)
 			R = m - 1;
 		}
 		else
+		{
 			break;
+		}
 	}
 	if (array[m] == value)
 	{
